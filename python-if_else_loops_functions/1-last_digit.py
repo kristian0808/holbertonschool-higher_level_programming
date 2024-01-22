@@ -5,7 +5,7 @@ number = random.randint(-10000, 10000)
 
 str1 = "Last digit of"
 str2 = "is"
-last_digit = abs(number) % 10
+last_digit = number % 10 if number > 0 else number % -10
 
 
 if last_digit > 5:
