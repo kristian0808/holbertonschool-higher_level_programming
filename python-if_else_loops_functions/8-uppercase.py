@@ -4,7 +4,3 @@ def uppercase(str):
         if ord(char) >= 97 and ord(char) <= 122:  # ASCII values for lowercase letters
             char = chr(ord(char) - 32)  # Convert to uppercase
         print("{}".format(char), end="")
-
-
-uppercase("best")
-uppercase("Best School 98 Battery street")
