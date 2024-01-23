@@ -6,5 +6,5 @@ def uppercase(str):
         print("{}".format(char), end="")
 
 
-print(uppercase("best"))
-print(uppercase("Best School 98 Battery street"))
+uppercase("best")
+uppercase("Best School 98 Battery street")
