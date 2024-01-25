@@ -11,4 +11,3 @@ def new_in_list(my_list, idx, element):
             new_list[idx] = element
     # Return the new list
     return new_list
-
