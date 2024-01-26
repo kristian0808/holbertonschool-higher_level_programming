@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
 
-def multiple_returns(sentence): 
-    if not sentence: #if 
+def multiple_returns(sentence):
+    if not sentence:
         f_char = None
         return (0, f_char)
     else:
