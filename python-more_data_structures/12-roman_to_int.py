@@ -8,8 +8,26 @@ def roman_to_int(roman_string):
 
     for i in range(len(roman_string)):
         if (
-            i + 1 < len(roman_string) and roman[roman_string[i]] < roman[roman_string[i + 1]]):
+            i + 1 < len(roman_string)
+            and roman[roman_string[i]] < roman[roman_string[i + 1]]
+        ):
             res -= roman[roman_string[i]]
         else:
-            res += roma[roman_string[i]]
+            res += roman[roman_string[i]]
     return res
+
+
+roman_number = "X"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+roman_number = "VII"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+roman_number = "IX"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+roman_number = "LXXXVII"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+roman_number = "DCCVII"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
