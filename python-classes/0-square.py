@@ -3,6 +3,6 @@
 
 
 class Square:
-    """ created an empty class """
-    pass
+    """created an empty class"""
 
+    pass
