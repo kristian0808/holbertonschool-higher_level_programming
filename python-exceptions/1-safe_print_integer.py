@@ -2,13 +2,10 @@
 
 
 def safe_print_integer(value):
+    if not isinstance(value, int):
+        return False
     try:
-        if isinstance(value, set):
-            for val in value:
-                print("{:d}".format(val), end="")
-            print()
-        else:
-            print("{:d}".format(value))
+        print("{:d}".format(value))
         return True
     except ValueError:
         return False
