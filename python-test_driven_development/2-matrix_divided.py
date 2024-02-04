@@ -16,11 +16,11 @@ def matrix_divided(matrix, div):
 
     if not isinstance(matrix, list) or \
         not all(isinstance(row, list) for row in matrix):
-        raise TypeError(err1)
+            raise TypeError(err1)
 
     if not \
         all(isinstance(item, (int, float)) for row in matrix for item in row):
-        raise TypeError(err1)
+            raise TypeError(err1)
 
     if not all(len(row) == len(matrix[0]) for row in matrix):
         raise TypeError(err2)
