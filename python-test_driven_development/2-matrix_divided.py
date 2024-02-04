@@ -14,12 +14,11 @@ def matrix_divided(matrix, div):
     err3 = "div must be a number"
     err4 = "division by zero"
 
-    if not isinstance(matrix, list) or \
-        not all(isinstance(row, list) for row in matrix):
-            raise TypeError(err1)
+    if type(matrix) is not list or not all(type(row) is list for row in matrix):
+        raise TypeError(err1)
 
-    if not \
-        all(isinstance(item, (int, float)) for row in matrix for item in row):
+    for row in matrix:
+        if not all(isinstance(item, (int, float)) for item in row):
             raise TypeError(err1)
 
     if not all(len(row) == len(matrix[0]) for row in matrix):
