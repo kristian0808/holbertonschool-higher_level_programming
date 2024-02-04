@@ -7,7 +7,7 @@ If the inputs are floats, they are casted to integers before the addition.
 
 
 def add_integer(a, b=98):
-      """
+    """
     This function adds two integers or floats.
     If the inputs are floats, they are casted to integers before the addition.
     """
