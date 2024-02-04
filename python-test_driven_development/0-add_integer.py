@@ -1,5 +1,10 @@
 #!/usr/bin/python3
 
+"""
+This module contains a function that adds two integers or floats.
+If the inputs are floats, they are casted to integers before the addition.
+"""
+
 
 def add_integer(a, b=98):
     if not isinstance(a, (int, float)):
