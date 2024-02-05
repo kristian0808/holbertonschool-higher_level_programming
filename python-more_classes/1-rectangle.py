@@ -25,7 +25,7 @@ class Rectangle:
             raise ValueError("width must be >=")
         self.__width = value
 
-    @width.setter
+    @height.setter
     def height(self, value):
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
