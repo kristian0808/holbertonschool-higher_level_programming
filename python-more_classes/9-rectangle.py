@@ -48,7 +48,7 @@ class Rectangle:
         return 2 * (self.__height + self.__width)
 
     def __str__(self):
-        if self.__width == 0 or self.__height == 0:
+        if self.__width <= 0 or self.__height <= 0:
             return ""
         return "\n".join([
             str(self.print_symbol) * self.__width for i in range(self.__height)
@@ -73,6 +73,4 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        if size < 0:
-            raise ValueError("size must be >= 0")
         return cls(size, size)
