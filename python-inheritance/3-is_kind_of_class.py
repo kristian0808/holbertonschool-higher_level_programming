@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Write a function that returns True or if ct is an instance of a class that inherited from, the specified class ; otherwise False.
+"""Write a function that red class ; otherwise False.
 """
 
 
