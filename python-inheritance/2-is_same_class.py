@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Write a function that returns True if the object is exactly an instance of the specified class ; otherwise False.
+"""Write a function that returns of the specified class ; otherwise False.
 """
 
 
