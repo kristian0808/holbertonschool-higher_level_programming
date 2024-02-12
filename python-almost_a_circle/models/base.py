@@ -1,5 +1,7 @@
 #!/bin/usr/python3
+""" base class """
 class Base:
+    """ base """
     __nb_object = 0
 
     def __init__(self, id=None):
