@@ -20,3 +20,11 @@ class Square(Rectangle):
     @size.setter
     def size(self, value):
         self.width = self.height = value
+
+    def update(self, *args, **kwargs):
+        nr_args = ['id', 'size', 'x', 'y']
+        for i in range(len(nr_args)):
+            if i < len(nr_args):
+                setattr(self, nr_args[i], args[i])
+        for key, value in kwargs.items():
+            setattr(self, key, value)
