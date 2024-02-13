@@ -81,8 +81,8 @@ class Rectangle(Base):
         )
 
     def update(self, *args, **kwargs):
-        """ update """
-        attributes = ['id', 'width', 'height', 'x', 'y']
+        """update"""
+        attributes = ["id", "width", "height", "x", "y"]
         if args:
             for attribute, value in zip(attributes, args):
                 setattr(self, attribute, value)
@@ -90,3 +90,13 @@ class Rectangle(Base):
             for key, value in kwargs.items():
                 if key in attributes:
                     setattr(self, key, value)
+
+    def to_dictionary(self):
+        """dictionary"""
+        return {
+            "id": self.id,
+            "width": self.width,
+            "height": self.height,
+            "x": self.x,
+            "y": self.y,
+        }
