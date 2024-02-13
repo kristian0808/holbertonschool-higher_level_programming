@@ -79,3 +79,9 @@ class Rectangle(Base):
             f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - "
             f"{self.__width}/{self.__height}"
         )
+
+    def update(self, *args):
+        "assign an argument to each attribute"
+        attributes = ["id", "width", "height", "x", "y"]
+        for attribute, value in zip(attributes, args):
+            setattr(self, attribute, value)
