@@ -2,8 +2,10 @@
 """ base class """
 import json
 
+
 class Base:
-    """ base """
+    """base"""
+
     __nb_object = 0
 
     def __init__(self, id=None):
