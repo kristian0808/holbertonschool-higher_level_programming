@@ -17,24 +17,19 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        """ json """
         if not list_dictionaries:
             return "[]"
         return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """
-        Class method to save json represantation of
-        object files
-        """
+        if cls is None:
+            cls = "Rectangle"
+        filename = cls.__name__ + ".json"
+        if list_objs is None:
+            list_objs = []
+        serialized_data = [obj.to_dictionary() for obj in list_objs]
+        json_string = cls.to_json_string(serialized_data)
 
-        with open(f"{cls.__name__}.json", "w+") as file_js:
-            if list_objs is None:
-                file_js.write(json.dumps([]))
-                return
-            list_of_dictionaries = []
-            for objs in list_objs:
-                if issubclass(objs.__class__, Base):
-                    list_of_dictionaries.append(objs.to_dictionary())
-            file_js.write(Base.to_json_string(list_of_dictionaries))
+        with open(filename, "w") as file:
+            file.write(json_string)
