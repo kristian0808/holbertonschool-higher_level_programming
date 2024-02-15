@@ -22,6 +22,7 @@ class Base:
         return json.dumps(list_dictionaries)
 
     @classmethod
+    """save save save"""
     def save_to_file(cls, list_objs):
         filename = cls.__name__ + ".json"
         with open(filename, "w") as file:
