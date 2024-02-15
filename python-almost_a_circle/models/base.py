@@ -23,6 +23,7 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
+        """ omeeeeeeeee """
         if cls is None:
             cls = "Rectangle"
         filename = cls.__name__ + ".json"
