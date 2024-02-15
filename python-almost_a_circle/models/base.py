@@ -31,6 +31,5 @@ class Base:
             list_objs = []
         serialized_data = [obj.to_dictionary() for obj in list_objs]
         json_string = cls.to_json_string(serialized_data)
-
         with open(filename, "w") as file:
             file.write(json_string)
