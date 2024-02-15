@@ -23,7 +23,7 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """ save """
+        """save"""
         filename = cls.__name__ + ".json"
         list_dicts = [obj.to_dictionary() for obj in list_objs] if list_objs else []
         json_string = cls.to_json_string(list_dicts)
