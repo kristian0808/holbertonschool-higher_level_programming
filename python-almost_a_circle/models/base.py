@@ -23,7 +23,6 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """omeeeeeeeee"""
         if cls is None:
             cls = "Rectangle"
         filename = cls.__name__ + ".json"
@@ -31,7 +30,8 @@ class Base:
             list_objs = []
         serialized_data = [obj.to_dictionary() for obj in list_objs]
         json_string = cls.to_json_string(serialized_data)
-        with open(filename, "w") as file:
+
+        with open(filename, 'w') as file:
             file.write(json_string)
     
     @staticmethod
