@@ -20,7 +20,7 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     # Execute a query
-    cursor.execute("SELECT * FROM states WHERE name BINARY 'N%' ORDER BY id")
+    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' OR LIKE 'n%' ORDER BY id")
 
     # Fetch all the rows
     rows = cursor.fetchall()
