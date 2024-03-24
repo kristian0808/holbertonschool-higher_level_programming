@@ -21,16 +21,16 @@ if __name__ == "__main__":
 
     # Execute a query with filter word
     cursor.execute(
-        "SELECT cities.id, cities.name, states.name FROM cities "
-        "INNER JOIN states ON cities.state_id = states.id "
-        "WHERE BINARY states.name = %s"
+        "SELECT cities.name FROM cities "
+        "JOIN states ON cities.state_id = states.id "
+        "WHERE states.name LIKE BINARY %s"
         "ORDER BY cities.id", (argv[4], )
     )
 
     # Fetch all the rows
     rows = cursor.fetchall()
 
-    print(", ".join([str(row[0]) for row in rows]))
+    print(", ".join([(row[0]) for row in rows]))
 
     # Close the connection
     cursor.close()
