@@ -21,7 +21,7 @@ if __name__ == "__main__":
 
     # Execute a query with filter word
     cursor.execute("SELECT * FROM states WHERE BINARY name = %s ORDER BY id"
-                   ,(argv[4],))
+                   ,(argv[4], ))
 
     # Fetch all the rows
     rows = cursor.fetchall()
