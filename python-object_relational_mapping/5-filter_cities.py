@@ -30,7 +30,7 @@ if __name__ == "__main__":
     # Fetch all the rows
     rows = cursor.fetchall()
 
-    print(", ".join([row[0] for row in rows]))
+    print(", ".join([str(row[0]) for row in rows]))
 
     # Close the connection
     cursor.close()
