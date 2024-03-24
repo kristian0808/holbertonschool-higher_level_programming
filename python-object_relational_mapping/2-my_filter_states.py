@@ -19,9 +19,10 @@ if __name__ == "__main__":
     # Create a cursor object
     cursor = db.cursor()
 
-    query = "SELECT * FROM states WHERE name = %s ORDER BY id"
+    query = 
     # Execute a query with filter word
-    cursor.execute(query, (argv[4],))
+    cursor.execute("SELECT * FROM states WHERE name = '{}' ORDER BY id"
+                   .format(argv[4]))
 
     # Fetch all the rows
     rows = cursor.fetchall()
