@@ -19,7 +19,6 @@ if __name__ == "__main__":
     # Create a cursor object
     cursor = db.cursor()
 
-    query = 
     # Execute a query with filter word
     cursor.execute("SELECT * FROM states WHERE name = '{}' ORDER BY id"
                    .format(argv[4]))
