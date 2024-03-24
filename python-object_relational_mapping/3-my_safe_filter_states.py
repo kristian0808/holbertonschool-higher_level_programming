@@ -20,7 +20,7 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     # Execute a query with filter word
-    cursor.execute("SELECT * FROM states WHERE BINARY name = %s ORDER BY id", 
+    cursor.execute("SELECT * FROM states WHERE BINARY name = %s ORDER BY id",
                    (argv[4], ))
 
     # Fetch all the rows
