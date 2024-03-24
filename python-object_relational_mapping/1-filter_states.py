@@ -21,7 +21,7 @@ if __name__ == "__main__":
 
     # Execute a query
     cursor.execute("SELECT * FROM states WHERE BINARY name LIKE 'N%' "
-               "ORDER BY id")
+                   "ORDER BY id")
 
     # Fetch all the rows
     rows = cursor.fetchall()
